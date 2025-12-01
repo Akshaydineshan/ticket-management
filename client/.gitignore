@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+npm-debug.log
+npm-debug.log.*
+yarn-error.log*
+
+# Angular
+dist/
+out-tsc/
+.angular/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+*.js.map
+*.css.map
+
+# OS
+Thumbs.db

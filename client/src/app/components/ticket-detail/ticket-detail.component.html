@@ -1,0 +1,16 @@
+<div>
+  <h2>Ticket Details</h2>
+  <div *ngIf="ticket">
+    <h3>{{ ticket.title }}</h3>
+    <p><strong>Description:</strong> {{ ticket.description }}</p>
+    <p><strong>Status:</strong> {{ ticket.status }}</p>
+    <p><strong>Priority:</strong> {{ ticket.priority }}</p>
+    <p><strong>Created By:</strong> {{ ticket.createdBy }}</p>
+    <p><strong>Created On:</strong> {{ ticket.createdOn | date }}</p>
+    <button (click)="editTicket()">Edit Ticket</button>
+    <button (click)="deleteTicket()">Delete Ticket</button>
+  </div>
+  <div *ngIf="!ticket">
+    <p>Loading ticket details...</p>
+  </div>
+</div>
