@@ -1,22 +1,20 @@
-<div>
-  <h1>Create Ticket</h1>
-  <form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
-    <div>
-      <label for="title">Title:</label>
-      <input type="text" id="title" required [(ngModel)]="ticket.title" name="title">
-    </div>
-    <div>
-      <label for="description">Description:</label>
-      <textarea id="description" required [(ngModel)]="ticket.description" name="description"></textarea>
-    </div>
-    <div>
-      <label for="priority">Priority:</label>
-      <select id="priority" required [(ngModel)]="ticket.priority" name="priority">
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select>
-    </div>
-    <button type="submit">Submit Ticket</button>
+<h2>Create New Ticket</h2>
+
+<div class="form-box">
+  <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+    <label>Title</label>
+    <input formControlName="title">
+
+    <label>Description</label>
+    <textarea rows="4" formControlName="description"></textarea>
+
+    <label>Priority</label>
+    <select formControlName="priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <button type="submit">Save Ticket</button>
   </form>
 </div>

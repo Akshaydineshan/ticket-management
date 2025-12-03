@@ -1,5 +1,21 @@
-<div>
-  <h1>IT Ticket Management System</h1>
-  <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
+<div class="sidebar">
+  <h2>IT HelpDesk</h2>
+
+  <ul>
+    <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li><a routerLink="/tickets" routerLinkActive="active">Tickets</a></li>
+    <li><a routerLink="/create-ticket" routerLinkActive="active">Create Ticket</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+  </ul>
+</div>
+
+<div class="main-area">
+  <div class="topbar">
+    <h1>Ticket Management System</h1>
+    <div class="user-badge">👤 Admin</div>
+  </div>
+
+  <div class="main-container">
+    <router-outlet></router-outlet>
+  </div>
 </div>

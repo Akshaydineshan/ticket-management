@@ -6,7 +6,7 @@ import { Ticket } from '../../models/ticket.model';
 @Component({
   selector: 'app-ticket-form',
   templateUrl: './ticket-form.component.html',
-  styleUrls: ['./ticket-form.component.css']
+ 
 })
 export class TicketFormComponent {
   ticketForm: FormGroup;

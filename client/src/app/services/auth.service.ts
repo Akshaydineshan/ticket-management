@@ -1,3 +1,6 @@
+import { HttpClient } from "@angular/common/http";
+import { Observable, tap } from "rxjs";
+
 export class AuthService {
   private apiUrl = 'https://your-api-url.com/api'; // Replace with your API URL
   private tokenKey = 'auth_token';

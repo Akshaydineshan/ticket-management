@@ -7,6 +7,9 @@ import { TicketDetailComponent } from './components/ticket-detail/ticket-detail.
 import { TicketFormComponent } from './components/ticket-form/ticket-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+     BrowserModule,
+    RouterModule.forRoot([]),
+    ReactiveFormsModule,
+    AppRoutingModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

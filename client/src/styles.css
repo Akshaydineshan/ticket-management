@@ -1,0 +1,254 @@
+/* ---------------------------------------------------
+   GLOBAL THEME
+--------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: #eef1f8;
+  /* display: flex; */
+  height: 100vh;
+}
+
+/* ---------------------------------------------------
+   SIDEBAR
+--------------------------------------------------- */
+.sidebar {
+  
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #334155;
+  color: white;
+}
+
+/* ---------------------------------------------------
+   TOPBAR
+--------------------------------------------------- */
+.topbar {
+  width: 100%;
+  background: white;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+}
+
+.topbar h1 {
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.user-badge {
+  background: #1e293b;
+  padding: 8px 16px;
+  border-radius: 50px;
+  color: white;
+}
+
+/* ---------------------------------------------------
+   MAIN CONTENT
+--------------------------------------------------- */
+.main-container {
+  width: 100%;
+  padding: 28px;
+  overflow-y: auto;
+}
+
+/* ---------------------------------------------------
+   DASHBOARD CARDS
+--------------------------------------------------- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.card .count {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0ea5e9;
+}
+
+/* ---------------------------------------------------
+   TABLE STYLING
+--------------------------------------------------- */
+.table-wrapper {
+  background: white;
+  padding: 22px;
+  margin-top: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #1e293b;
+  color: white;
+}
+
+thead th {
+  padding: 14px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* STATUS BADGES */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-open { background: #f0f9ff; color: #0284c7; }
+.status-inprogress { background: #fef9c3; color: #b45309; }
+.status-closed { background: #dcfce7; color: #15803d; }
+
+/* ---------------------------------------------------
+   FORM STYLING
+--------------------------------------------------- */
+.form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  max-width: 600px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #334155;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 18px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px #bae6fd;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0284c7;
+}
+
+/* ---------------------------------------------------
+   TICKET DETAILS CARD
+--------------------------------------------------- */
+.details-box {
+  background: white;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  max-width: 700px;
+}
+
+.details-box h2 {
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.details-box p {
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.details-box p strong {
+  color: #0ea5e9;
+}

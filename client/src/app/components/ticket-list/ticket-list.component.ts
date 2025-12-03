@@ -1,3 +1,12 @@
+import { Component } from "@angular/core";
+import { TicketService } from "src/app/services/ticket.service";
+
+
+@Component({
+  selector: 'app-ticket-list',
+  templateUrl: './ticket-list.component.html',
+
+})
 export class TicketListComponent {
   tickets: any[] = [];
   sortedTickets: any[] = [];
@@ -25,5 +34,9 @@ export class TicketListComponent {
   toggleSortOrder() {
     this.sortOrder = this.sortOrder === 'asc' ? 'desc' : 'asc';
     this.sortTickets();
+  }
+
+  viewDetails(ticketId: number) {
+    // Logic to navigate to ticket detail view
   }
 }
